@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+#homePage{
+  width:100%;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+#landingPage{
+  width:100%;
+  min-width: 400px;
+  height: 100%;
+  background-image: url('../../../assets/img/background.png');
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  min-width: 800px;
+  box-sizing: border-box;
+
+}
+
+#left{
+  display:flex;
+  justify-content: center;
+
+  align-items: center;
+
+}
+#leftContent{
+  text-align: left;
+  padding: 2.3em 2.3em 2.3em 4.2em;
+  line-height: 2em;
+}
+#right{
+  display: flex;
+  justify-content: right;
+  align-items:flex-end;
+}
+h1,p{
+  font-family: 'Shadows Into Light Two', cursive;
+}
+h1{
+  color:greenyellow;
+  font-size: 5em;
+}
+p{
+  font-size:3em;
+  color:aqua
+}
+button{
+  font-size: 1em;
+  background-color: #e91e63;
+  color:white;
+  border-radius:10%;
+  padding:0.2em 1.2em;
+  border:none
+
+
+}
+button:hover{
+  color:greenyellow;
+
+}
+@media only screen and (min-width: 768px) {
+  #homePage{
+box-sizing: border-box;
+overflow: hidden;
+
+
+}
+}
+
+
+
+
+

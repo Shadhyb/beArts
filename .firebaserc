@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bearts-192af"
+  },
+  "targets": {
+    "bearts-192af": {
+      "hosting": {
+        "bw3": [
+          "bearts-192af"
+        ]
+      }
+    }
+  }
+}

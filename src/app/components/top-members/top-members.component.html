@@ -1,0 +1,31 @@
+<!-- <h3>Utenti</h3>
+<div>
+  <nz-table
+    #rowSelectionTable
+    nzShowPagination
+    nzShowSizeChanger
+    [nzData]="listOfData"
+    [nzPageSizeOptions]="[5, 10, 15, 20, 50, 100]"
+    [nzPageSize]="5"
+    (nzCurrentPageDataChange)="onCurrentPageDataChange($event)"
+  >
+    <thead>
+      <tr id="top">
+        <th [nzWidth]="'20%'"></th>
+        <th [nzWidth]="'55%'"></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let data of rowSelectionTable.data"
+
+        id="bot"
+      >
+        <td>{{ data.post.userName }}</td>
+        <td></td>
+
+      </tr>
+    </tbody>
+  </nz-table>
+</div> -->

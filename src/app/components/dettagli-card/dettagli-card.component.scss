@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div{
+  background: center center;
+  background-size: cover;
+
+}
+#like{
+  font-size: 1em;
+  background-color: #e91e63;
+  color:white;
+  border-radius:10%;
+  border:none;
+  padding:0.2em 1.2em;
+
+
+}
+nz-card{
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  width:500px;
+}
+button:hover{
+  color:greenyellow;
+
+}

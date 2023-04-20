@@ -1,0 +1,38 @@
+<div
+*ngIf="post"
+
+>
+<div class="container">
+  <div nz-row nzGutter="8">
+    <div nz-col nzSpan="8">
+      <nz-card [nzCover]="cover" [nzTitle]="post.title">
+
+        <p> {{ post.description }}</p>
+
+        <p *ngIf="cont">Like: {{ cont }}</p>
+
+        <p>
+          <button
+            id="like"
+            nz-button
+            nzShape="round"
+            [disabled]="!isLoggedIn"
+            (click)="toggle()"
+          >
+            <span nz-icon nzType="like" [nzTheme]="fillOutline"></span>
+          </button>
+          <nz-demo-button-size
+            *ngIf="seiTu"
+            [arr]="['edit', 'delete']"
+            [id]="post.id"
+            (onClick)="buttonClick($event)"
+          ></nz-demo-button-size>
+        </p>
+      </nz-card>
+      <ng-template #cover>
+        <img alt="example" src="{{post.imgUrl}}" />
+      </ng-template>
+    </div>
+  </div>
+</div>
+</div>

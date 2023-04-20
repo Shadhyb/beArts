@@ -1,0 +1,58 @@
+<div class="container">
+  <div id="form-container">
+  <form #form="ngForm" (ngSubmit)="submit()" id="form">
+      <div ngModelGroup="formPost" class="form-group">
+        <div class="form-group bb">
+          <label id="cTitle" for="title">Edit your Title</label>
+          <input
+            nz-input
+            type="text"
+            id="titleInput"
+            name="title"
+            #title="ngModel"
+            [(ngModel)]="postInterface.title"
+            required
+          />
+        </div>
+
+        <div class="form-group bb">
+          <label id="cTitle" for="imgUrl">Edit your img</label>
+          <input
+            nz-input
+            id="imgUrl"
+            type="text"
+            name="imgUrl"
+            #ingredients="ngModel"
+            [(ngModel)]="postInterface.imgUrl"
+            required
+          />
+        </div>
+
+
+
+
+
+        <div class="form-group bb">
+          <label id="cPost" for="description">Edit your description</label>
+          <textarea
+            id="description"
+            rows="2"
+            nz-input
+            type="text"
+            name="description"
+            #description="ngModel"
+            [(ngModel)]="postInterface.description"
+            required
+          ></textarea>
+        </div>
+
+        <div id="buttons">
+          <button [disabled]="!form.valid">
+            Edit
+          </button>
+          <p [routerLink]="['/posts']"> Back</p>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>

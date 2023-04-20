@@ -1,0 +1,42 @@
+<div class="container">
+  <div id="form-container">
+  <form #form="ngForm" (ngSubmit)="submit()" id="form">
+    <div ngModelGroup="formPost" class="form-group">
+      <div class="form-group bb">
+        <label id="cTitle" for="title">Title</label>
+        <input nz-input type="text" id="title" name="title" #title="ngModel" [ngModel]="postInterface.title" required />
+      </div>
+
+      <div class="form-group bb">
+
+
+
+      <div *ngIf="img" class="form-group bb">
+        <label id="cTitle" for="imgUrl">Url img</label>
+        <input nz-input id="imgUrl" type="text" name="imgUrl" #ingredients="ngModel"
+          [(ngModel)]="postInterface.imgUrl" />
+      </div>
+      </div>
+
+
+
+
+
+      <div class="form-group bb">
+        <label id="cPost" for="description">Description</label>
+        <textarea id="description" rows="2" nz-input type="text" name="description" #description="ngModel"
+          [(ngModel)]="postInterface.description" required></textarea>
+      </div>
+
+      <div id="buttons">
+        <button nz-button [disabled]="!form.valid">
+          Post
+        </button>
+        <p nz-button (click)="imgToggle()">Add image</p>
+        <p nz-button [routerLink]="['/posts']"> Back</p>
+      </div>
+
+    </div>
+  </form>
+</div>
+</div>

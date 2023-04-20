@@ -1,0 +1,138 @@
+
+
+.container{
+  height: 78vh;
+
+  background-size: cover ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  #form-container{
+
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+    width: 600px;
+    height: 600px;
+    @media only screen and (max-width: 325px){
+      background-size: cover;
+    }
+    display: flex;
+  }
+}
+
+
+#form{
+  margin: auto;
+  width: 380px;
+  font-family: 'Roboto', sans-serif;
+  @media only screen and (max-width: 500px){
+    width: 270px
+  }
+  @media only screen and (max-width: 400px){
+    width: 220px
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    label{
+      font-size: 1.7em;
+      padding-left: 10px;
+
+      @media only screen and (max-width: 500px){
+        font-size: 1.2em;
+      }
+      @media only screen and (max-width: 400px){
+        font-size: 0.8em;
+      }
+    }
+    #buttons{
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      button, p{
+       margin-right: 15px;
+       font-size: 1.5em;
+       font-weight: 700;
+       background-color: #e91e63;
+       color:white;
+       margin-bottom: 0;
+       &:hover{
+        transform: scale(1.15);
+        cursor: pointer;
+
+      }
+      }
+      button{
+        background-color: #e91e63;
+        color:white;
+        border: none;
+        margin: 1em;
+      }
+    }
+    p{
+      padding:0 0.7em;
+    }
+
+  }
+}
+
+.bb{
+  margin-bottom: 10px;
+}
+
+#back{
+  padding: 0 4px;
+  border-radius: 10px;
+  background-color: #9b6802;
+  color: black;
+  border: none;
+  &:hover{
+    background-color:rgb(231, 22, 22);
+    transform: scale(1.1);
+    color: white;
+  }
+}
+#addImage:hover{
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+#addImage{
+  background-color: #9b6802;
+  border: none;
+  &:hover{
+    background-color: yellow;
+  }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    &:hover{
+      color: black;
+    }
+  }
+
+}
+
+#sendPost{
+  width: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #9b6802;
+  color: white;
+  span{
+    display: flex;
+    align-items: center;
+  }
+  &:hover{
+    background-color: green;
+    transform: scale(1.1);
+  }
+}
+

@@ -1,0 +1,39 @@
+<div id="container">
+  <div id="navbar" nz-row>
+    <div nz-col nz-col nz-row [nzLg]="{span:19}" [nzMd]="{span:18}" [nzXs]="{span:24}"  >
+      <ul id="nav-ul" nz-col nzSpan="24">
+        <li id="contLogo">
+          <img id="logo" src="" alt="" />
+        </li>
+        <li
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <span id="home" nz-icon nzType="home" nzTheme="outline"></span>
+          <span class="scritta">Home</span>
+        </li>
+        <li [routerLink]="['/posts']" routerLinkActive="active">
+          <span nz-icon nzType="container" nzTheme="outline"></span>
+         <span class="scritta">Post</span>
+        </li>
+
+        <!-- <li [routerLink]="['/top-members']" routerLinkActive="active">
+          <span nz-icon nzType="crown" nzTheme="outline"></span>
+         <span class="scritta">Utenti</span>
+        </li> -->
+        <li [routerLink]="['/login']" id="utente" routerLinkActive="active"><span nz-icon nzType="user" nzTheme="outline"></span></li>
+      </ul>
+    </div>
+    <div nz-col [nzLg]="{span:5}" [nzMd]="{span:6}" [nzSm]="{span:0}"  id="login">
+      <ul *ngIf="!isLoggedIn">
+        <li class="login" [routerLink]="['/login']" routerLinkActive="active">Log in</li>
+        <li class="login" [routerLink]="['/signup']" routerLinkActive="active">Sign up</li>
+      </ul>
+      <ul *ngIf="isLoggedIn">
+        <li class="login" [routerLink]="['/profile']" routerLinkActive="Profile">Profile</li>
+        <li class="login" [routerLink]="['/']" (click)="signOut()">Logout</li>
+      </ul>
+    </div>
+  </div>
+</div>
